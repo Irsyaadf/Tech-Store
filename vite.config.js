@@ -9,9 +9,4 @@ export default defineConfig({
       external: ["framer-motion"],
     },
   },
-  resolve: {
-    alias: {
-      "framer-motion": require.resolve("framer-motion"),
-    },
-  },
 });
