@@ -1,8 +1,8 @@
 import React from 'react'; // import library react
 import { Routes, Route, Navigate } from 'react-router-dom'; // import library react-router-dom
-import Home from '../pages/Home'; // import halaman Home 
-import Login from '../pages/Login'; // import halaman Login
-import Register from '../pages/Register'; // import halaman Register
+import Home from './pages/Home';
+import Login from './pages/Login'; // import halaman Login
+import Register from './pages/Register'; // import halaman Register
 
 // ini pakai arrow function juga
 const AppRoutes = () => {
