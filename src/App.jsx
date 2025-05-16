@@ -1,22 +1,21 @@
 import React from 'react'; // import library react
-import { BrowserRouter } from 'react-router-dom'; // import library react-router-dom
-// Fungsi dari library react-router-dom untuk routing/pemindahan halaman
-import AppRoutes from './routes/AppRoutes'; // import AppRoutes.jsx dari folder routes
+import { Routes, Route, Navigate } from 'react-router-dom'; // import library react-router-dom
+import Home from '../pages/Home'; // import halaman Home 
+import Login from '../pages/Login'; // import halaman Login
+import Register from '../pages/Register'; // import halaman Register
 
-/* ada berbagai jenis functional components yang sering di pakai:
-- function declaration
-- arrow function
-*/
-
-// ini pakai arrow function
-const App = () => {
+// ini pakai arrow function juga
+const AppRoutes = () => {
   return (
-    <BrowserRouter>
-      {/* Memanggil AppRoutes */}
-      <AppRoutes />
-    </BrowserRouter>
+    <Routes>
+      {/* routingnya ada di sini*/}
+      <Route path="/" element={<Navigate to="/home" />} />
+      <Route path="/home" element={<Home />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Register />} />
+    </Routes>
   );
 };
 
-// ini untuk ekspor functionnya
-export default App;
+// ekspor AppRoutes
+export default AppRoutes;
